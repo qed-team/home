@@ -1,22 +1,16 @@
 import React from "react";
+import { Container } from "react-grid";
 import styled, { ThemeProvider } from "styled-components";
+
+import theme from "../config/theme";
 
 import GlobalStyles from "./GlobalStyles";
 
 const Layout = ({ children }) => {
-  const theme = {
-    fontFamily: {},
-    fontSize: {},
-    lineHeight: {},
-    palette: {},
-    spacing: {},
-    mediaQueries: {},
-  };
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {children}
+      <Container>{children}</Container>
     </ThemeProvider>
   );
 };
