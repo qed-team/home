@@ -35,8 +35,17 @@ const theme = {
     xs: "0 24px 48px 0 rgba(0, 0, 0, 0.12)",
     s: "0 24px 48px 0 rgba(0, 0, 0, 0.24)",
   },
+  borderRadius: {
+    m: 20,
+  },
   sizing: {
+    xs: 20,
+    s: 30,
+    m: 50,
     l: 1100,
+  },
+  spacing: {
+    factor: 20,
   },
 };
 
