@@ -1,4 +1,4 @@
-# home
+# 🏠
 
 > homepage for qed.team
 
