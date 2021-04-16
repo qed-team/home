@@ -1,7 +1,7 @@
 {
   "name": "qed-team",
   "version": "0.1.0",
-  "description": "qed.team landing page",
+  "description": "homepage for qed.team",
   "main": "index.js",
   "scripts": {
     "start": "gatsby develop",
