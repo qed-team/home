@@ -1,11 +1,11 @@
 {
   "name": "qed-team",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "homepage for qed.team",
   "main": "index.js",
   "scripts": {
-    "start": "gatsby develop",
-    "build": "gatsby build",
+    "start": "",
+    "build": "",
     "format": "prettier --config .prettierrc 'src/**/*.{js,jsx}'"
   },
   "repository": {
@@ -13,8 +13,7 @@
     "url": "git+https://github.com/qed-team/home.git"
   },
   "keywords": [
-    "gatsby",
-    "react",
+    "tailwind",
     "static"
   ],
   "author": "Balaj Marius <balajmarius@gmail.com>",
@@ -23,18 +22,5 @@
     "url": "https://github.com/qed-team/home/issues"
   },
   "homepage": "https://github.com/qed-team/home#readme",
-  "dependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^3.3.0",
-    "gatsby-plugin-favicon": "^3.1.6",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-react-helmet": "^4.3.0",
-    "gatsby-plugin-styled-components": "^4.3.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-grid": "^4.0.4",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.3",
-    "styled-reset-advanced": "^1.0.3"
-  }
+  "dependencies": {}
 }
