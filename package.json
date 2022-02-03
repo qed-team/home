@@ -4,7 +4,7 @@
   "description": "homepage for qed.team",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "npx tailwindcss -i ./src/css/style.css -o ./dist/style.css --watch",
     "build": "",
     "format": "prettier --config .prettierrc 'src/**/*.{js,jsx}'"
   },
@@ -22,5 +22,8 @@
     "url": "https://github.com/qed-team/home/issues"
   },
   "homepage": "https://github.com/qed-team/home#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.18"
+  }
 }
