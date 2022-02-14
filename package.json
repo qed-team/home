@@ -29,6 +29,7 @@
   "homepage": "https://github.com/qed-team/home#readme",
   "dependencies": {
     "clock-angle": "^0.0.2",
+    "date-fns-tz": "^1.2.2",
     "gatsby": "^3.3.0",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-google-fonts": "^1.0.1",
