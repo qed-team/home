@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useMemo } from "react";
 import angle from "clock-angle";
 
 import map from "../data/map.json";
+import clients from "../data/clients.json";
 
 import { theme } from "../../tailwind.config";
 
@@ -9,50 +10,39 @@ import { theme } from "../../tailwind.config";
  * Constants
  */
 const CITIES = [
-  ["124.996", "165.002"],
-  ["144.994", "225.005"],
-  ["184.999", "265"],
-  ["204.997", "225.005"],
-  ["304.995", "184.999"],
-  ["484.995", "145.004"],
-  ["544.998", "165.002"],
-  ["584.993", "165.002"],
-  ["564.995", "204.997"],
-  ["624.999", "184.999"],
-  ["844.993", "425.002"],
-  ["824.996", "325.003"],
-  ["844.993", "245.003"],
+  { name: "Seattle", timezone: "America/Los_Angeles" },
+  { name: "San Francisco", timezone: "America/Los_Angeles" },
+  { name: "Los Angeles", timezone: "America/Los_Angeles" },
+  { name: "New York", timezone: "America/New_York" },
+  { name: "London", timezone: "Europe/London" },
+  { name: "Paris", timezone: "Europe/Paris" },
+  { name: "Berna", timezone: "Europe/Berlin" },
+  { name: "Berlin", timezone: "Europe/Berlin" },
+  { name: "Timisoara", timezone: "Europe/Bucharest" },
+  { name: "Shanghai", timezone: "Asia/Shanghai" },
+  { name: "Singapore", timezone: "Asia/Singapore" },
+  { name: "Perth", timezone: "Australia/Perth" },
 ];
 
-const Clock = ({ hour, minute }) => {
-  console.log(angle(new Date().getHours(), null));
-  console.log(angle(null, new Date().getMinutes()));
+const Clock = ({ cx, cy, index }) => {
+  const { name, offset } = CITIES[index];
+
+  const angleHrs = angle(new Date().getHours(), null);
+  const angleMins = angle(null, new Date().getMinutes());
+
+  const style = {
+    transform: `translate(${cx}px, ${cy}px)`,
+  };
 
   return (
-    <div className="w-8 h-8 rounded-full bg-black relative">
-      <span className="block h-2 w-0.5 bottom-1/2 left-1/2 transform -translate-x-1/2 absolute origin-bottom rounded-sm bg-white" />
-      <span className="block h-3 w-0.5 bottom-1/2 left-1/2 transform -translate-x-1/2 absolute origin-bottom rounded-sm bg-white" />
+    <div className="flex items-center absolute" style={style}>
+      <span className="bg-black mr-2 w-8 h-8 rounded-full"></span>
+      <span className="font-semibold text-lg">{name}</span>
     </div>
   );
 };
 
 const Clients = () => {
-  const refs = [
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
-  ];
-
   return (
     <section className="bg-gray-50">
       <div className="container max-w-screen-lg mx-auto py-24">
@@ -60,22 +50,18 @@ const Clients = () => {
 
         <div className="relative">
           <svg viewBox="0 0 1050 490" className="block w-full -mt-10">
-            <g fill={theme.extend.colors.gray["500"]}>
-              {CITIES.map(([cx, cy], index) => (
-                <circle key={index} cx={cx} cy={cy} ref={refs[index]} r="5" />
-              ))}
-            </g>
-
-            <g fill={theme.extend.colors.gray["200"]}>
-              {map.points.map(([cx, cy], index) => (
-                <circle key={index} cx={cx} cy={cy} r="5" />
-              ))}
-            </g>
+            {map.points.map(([cx, cy], index) => (
+              <circle key={index} cx={cx} cy={cy} fill={theme.extend.colors.gray["200"]} r="5" />
+            ))}
           </svg>
+
+          <div className="absolute inset-0">
+            {clients.points.map(([cx, cy], index) => (
+              <Clock key={index} index={index} cx={cx} cy={cy} />
+            ))}
+          </div>
         </div>
       </div>
-
-      <Clock />
     </section>
   );
 };
