@@ -6,7 +6,11 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
-    "format": "prettier --config .prettierrc 'src/**/*.{js,jsx}'"
+    "format": "prettier --config .prettierrc 'src/**/*.{js,jsx}'",
+    "lint": "prettier --check --write --config .prettierrc 'src/**/*.{js,jsx}'"
+  },
+  "engines": {
+    "node": "14.15.0"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,7 @@
     "react",
     "static"
   ],
-  "author": "Balaj Marius <balajmarius@gmail.com>",
+  "author": "QED team <hi@qed.team>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/qed-team/home/issues"

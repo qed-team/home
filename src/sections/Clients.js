@@ -1,5 +1,4 @@
-import React, { useMemo } from "react";
-import angle from "clock-angle";
+import React from "react";
 
 import map from "../data/map.json";
 import clients from "../data/clients.json";
@@ -25,10 +24,7 @@ const CITIES = [
 ];
 
 const Clock = ({ cx, cy, index }) => {
-  const { name, offset } = CITIES[index];
-
-  const angleHrs = angle(new Date().getHours(), null);
-  const angleMins = angle(null, new Date().getMinutes());
+  const { name } = CITIES[index];
 
   const style = {
     transform: `translate(${cx}px, ${cy}px)`,

@@ -18,22 +18,22 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
       - name: Install
-        run: npm install
+        run: yarn
 
-      - name: Format
-        run: npm run format
+      - name: Format and lint
+        run: yarn lint
 
       - name: Build
         env:
           NODE_ENV: production
-        run: npm run build
+        run: yarn build
 
       - name: Deploy
         if: success()
