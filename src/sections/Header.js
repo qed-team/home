@@ -12,11 +12,11 @@ const Header = () => {
 
       <button className="flex items-center" data-action-contact>
         <span className="text-blue-50 text-lg font-semibold sm:text-2xl">
-          <a href="mailto:contact@qed.team">Get in touch</a>
+          <a href="/jobs">Join us</a>
         </span>
 
         <span className="bg-blue-50 block p-3 ml-5 rounded-full">
-          <img src={arrow} alt="Get in touch" className="block" />
+          <img src={arrow} alt="Join us" className="block" />
         </span>
       </button>
     </section>
