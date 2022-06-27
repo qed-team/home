@@ -11,12 +11,10 @@ import Footer from "../sections/Footer";
 import Clients from "../sections/Clients";
 
 const HomePage = () => {
-  const headline = <>We <em>move</em> startups forward.</>
-
   return (
     <Layout>
       <Header />
-      <Hero headline={headline} />
+      <Hero />
       <Cards />
       <Clients />
       <About />

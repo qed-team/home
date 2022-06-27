@@ -17,7 +17,7 @@ const Jobs = () => {
         </p>
       </div>
 
-      <div className="flex flex-col space-y-8">
+      <div className="flex flex-col">
         {jobs.map((job) => (
           <JobIntro key={job.name} job={job} selected={job.slug === selected?.slug} onSelect={setSelected} />
         ))}

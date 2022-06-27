@@ -9,16 +9,10 @@ import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 
 const JobsPage = () => {
-  const headline = (
-    <>
-      Find your <em>dream</em> job.
-    </>
-  );
-
   return (
     <Layout>
       <Header />
-      <Hero headline={headline} />
+      <Hero jobs />
       <Jobs />
       <Contact />
       <Footer />
