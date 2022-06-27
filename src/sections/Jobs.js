@@ -1,47 +1,57 @@
 import React, { useState } from "react";
 
-import jobs from "../data/jobs.json";
+import { jobs } from "../data/jobs.json";
 
-const JobDescription = ({description, responsibilities, requirements, plus}) => {
+const JobDescription = ({ description, responsibilities, requirements, plus }) => {
   return (
     <div className="flex flex-col mt-4 space-y-4">
       <p>{description}</p>
       <strong className="text-xl">Responsibilities</strong>
       <ul className="ml-4 space-y-2 list-disc">
-        {
-          responsibilities.map(r => {
-            return <li><small className="text-sm">{r}</small></li>
-          })
-        }
+        {responsibilities.map((r) => {
+          return (
+            <li>
+              <small className="text-sm">{r}</small>
+            </li>
+          );
+        })}
       </ul>
 
       <strong className="text-xl">Requirements</strong>
       <ul className="ml-4 space-y-2 list-disc">
-        {
-          requirements.map(r => {
-            return <li><small className="text-sm">{r}</small></li>
-          })
-        }
+        {requirements.map((r) => {
+          return (
+            <li>
+              <small className="text-sm">{r}</small>
+            </li>
+          );
+        })}
       </ul>
 
-      {
-        plus ?
+      {plus ? (
         <>
           <strong className="text-xl">Plus</strong>
           <ul className="ml-4 space-y-2 list-disc">
-            {
-              plus.map(p => {
-                return <li><small className="text-sm">{p}</small></li>
-              })
-            }
+            {plus.map((p) => {
+              return (
+                <li>
+                  <small className="text-sm">{p}</small>
+                </li>
+              );
+            })}
           </ul>
-        </> : null
-      }
+        </>
+      ) : null}
 
-      <strong className="text-large">> To apply send your resume at <a classname="text-blue-100" href="mailto:jobs@qed.team">jobs@qed.team</a></strong>
+      <strong className="text-large">
+        > To apply send your resume at{" "}
+        <a classname="text-blue-100" href="mailto:jobs@qed.team">
+          jobs@qed.team
+        </a>
+      </strong>
     </div>
-  )
-}
+  );
+};
 
 const Jobs = () => {
   const [opened, setOpened] = useState("");
@@ -59,14 +69,14 @@ const Jobs = () => {
       <div className="flex flex-col space-y-8">
         {jobs.map((job) => (
           <div key={job.name} className="flex flex-col space-y-1 cursor-pointer" onClick={() => setOpened(opened === job.slug ? "" : job.slug)}>
-              <hr />
-              <strong className="text-2xl leading-loose">{job.name}</strong>
-              <div className="flex items-center space-x-4">
-                  <small className="text-xl text-gray-400">{job.location}</small>
-                  <small className="text-xl text-gray-400">{job.allocation}</small>
-                  <small className="text-xl text-gray-400">{job.title}</small>
-              </div>
-              {opened === job.slug ? <JobDescription description={job.description} requirements={job.requirements} responsibilities={job.responsibilities} plus={job.plus} />: null}
+            <hr />
+            <strong className="text-2xl leading-loose">{job.name}</strong>
+            <div className="flex items-center space-x-4">
+              <small className="text-xl text-gray-400">{job.location}</small>
+              <small className="text-xl text-gray-400">{job.allocation}</small>
+              <small className="text-xl text-gray-400">{job.title}</small>
+            </div>
+            {opened === job.slug ? <JobDescription description={job.description} requirements={job.requirements} responsibilities={job.responsibilities} plus={job.plus} /> : null}
           </div>
         ))}
       </div>
