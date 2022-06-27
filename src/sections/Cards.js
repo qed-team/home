@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = () => {
   return (
-    <section className="container w-11/12 max-w-screen-lg mx-auto lg:space-x-20 flex items-center flex-col lg:flex-row py-20 md:py-40 lg:py-60">
+    <section className="container w-11/12 max-w-screen-lg mx-auto lg:space-x-20 flex items-center flex-col lg:flex-row pt-10 pb-20 md:pt-40 md:pb-40 lg:pb-60 lg:pt-60">
       <div className="flex flex-col mb-10 justify-center w-full md:w-auto md:flex-row lg:mb-0">
         <div className="p-5 rounded-3xl bg-blue-50 text-white w-full md:w-48 h-48 mb-4 md:mb-0 md:mt-36 shadow-2xl relative z-10">
           <small className="font-semibold text-xl leading-6">Years of startup experience</small>

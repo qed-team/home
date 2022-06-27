@@ -1,5 +1,4 @@
 import React from "react";
-import { utcToZonedTime } from "date-fns-tz";
 
 import map from "../data/map.json";
 
@@ -12,7 +11,7 @@ const Clients = () => {
         <h3 className="relative z-10 text-2xl md:text-4xl font-semibold whitespace-nowrap">Available worldwide</h3>
 
         <div className="relative">
-          <svg viewBox="0 0 1050 490" className="block w-full -mt-10">
+          <svg viewBox="0 0 1050 490" className="block w-full mt-5 md:-mt-10">
             {map.points.map(([cx, cy, fill], index) => (
               <circle key={index} cx={cx} cy={cy} fill={theme.extend.colors.gray[fill]} r="5" />
             ))}

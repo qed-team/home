@@ -5,7 +5,7 @@ import arrow from "../static/icon-arrow.svg";
 
 const Header = () => {
   return (
-    <section className="flex flex-col w-11/12 items-center mx-auto container max-w-screen-lg pt-10 pb-6 sm:pt-10 sm:pb-12 sm:flex-row sm:justify-between">
+    <section className="flex flex-col w-11/12 items-center mx-auto container max-w-screen-lg pt-10 pb-10 sm:pt-10 sm:pb-12 sm:flex-row sm:justify-between">
       <a href="/" target="_self" className="block mb-3 sm:mb-0">
         <img src={logo} alt="QED Software" />
       </a>
