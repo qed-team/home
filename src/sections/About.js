@@ -4,7 +4,7 @@ import team from "../data/team.json";
 
 const About = () => {
   return (
-    <section className="container max-w-screen-lg mx-auto py-60">
+    <section className="container max-w-screen-lg mx-auto pt-60">
       <div className="flex space-x-28 mb-28">
         <h3 className="text-4xl font-semibold whitespace-nowrap mb-5">A team to be proud of</h3>
         <p className="text-2xl text-gray-400 leading-10">
