@@ -7,13 +7,13 @@ const JobDetails = ({ job }) => {
 
   return (
     <div className="flex flex-col leading-10 text-lg md:text-xl pb-8">
-      <p className="mb-8" dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
+      <p className="mb-8 leading-10" dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
 
       <div className="flex flex-col mb-8">
         <strong className="text-xl md:text-2xl leading-loose text-black block mb-6">Responsibilities</strong>
         <ul className="list-decimal space-y-1 ml-6">
           {job.responsibilities.map((responsability) => (
-            <li className="text-gray-400" key={responsability}>
+            <li className="text-gray-400 leading-10" key={responsability}>
               {responsability}
             </li>
           ))}
@@ -24,7 +24,7 @@ const JobDetails = ({ job }) => {
         <strong className="text-xl md:text-2xl leading-loose text-black block mb-6">Requirements</strong>
         <ul className="list-decimal space-y-1 ml-6">
           {job.requirements.map((requirement) => (
-            <li className="text-gray-400" key={requirement}>
+            <li className="text-gray-400 leading-10" key={requirement}>
               {requirement}
             </li>
           ))}
