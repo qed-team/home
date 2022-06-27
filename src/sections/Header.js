@@ -11,7 +11,7 @@ const Header = () => {
       </a>
 
       <button className="flex items-center" data-action-contact>
-        <span className="text-blue-50 text-2xl font-semibold">Get in touch</span>
+        <span className="text-blue-50 text-2xl font-semibold"><a href="mailto:ioana@qed.team">Get in touch</a></span>
         <span className="bg-blue-50 block p-3 ml-5 rounded-full">
           <img src={arrow} alt="Get in touch" className="block" />
         </span>
