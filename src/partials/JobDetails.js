@@ -6,11 +6,11 @@ const JobDetails = ({ job }) => {
   };
 
   return (
-    <div className="flex flex-col leading-10 text-xl pb-8">
+    <div className="flex flex-col leading-10 text-lg md:text-xl pb-8">
       <p className="mb-8" dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
 
       <div className="flex flex-col mb-8">
-        <strong className="text-2xl leading-loose text-black block mb-6">Responsibilities</strong>
+        <strong className="text-xl md:text-2xl leading-loose text-black block mb-6">Responsibilities</strong>
         <ul className="list-decimal space-y-1 ml-6">
           {job.responsibilities.map((responsability) => (
             <li className="text-gray-400" key={responsability}>
@@ -21,7 +21,7 @@ const JobDetails = ({ job }) => {
       </div>
 
       <div className="flex flex-col mb-8">
-        <strong className="text-2xl leading-loose text-black block mb-6">Requirements</strong>
+        <strong className="text-xl md:text-2xl leading-loose text-black block mb-6">Requirements</strong>
         <ul className="list-decimal space-y-1 ml-6">
           {job.requirements.map((requirement) => (
             <li className="text-gray-400" key={requirement}>
@@ -33,7 +33,7 @@ const JobDetails = ({ job }) => {
 
       {job?.plus ? (
         <div className="flex flex-col mb-8">
-          <strong className="text-2xl leading-loose text-black block mb-6">Plus</strong>
+          <strong className="text-xl md:text-2xl leading-loose text-black block mb-6">Plus</strong>
           <ul className="list-decimal space-y-1 ml-6">
             {job.plus.map((plus) => (
               <li className="text-gray-400" key={plus}>

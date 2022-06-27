@@ -6,8 +6,8 @@ import { theme } from "../../tailwind.config";
 
 const Hero = ({ jobs }) => {
   return (
-    <section className="container max-w-screen-xl mx-auto relative">
-      <h1 className="text-6xl whitespace-nowrap font-semibold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <section className="container w-11/12 max-w-screen-xl mx-auto relative">
+      <h1 className="whitespace-nowrap font-semibold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl sm:text-4xl md:text-6xl">
         {jobs ? (
           <>
             Find your <em>dream</em> job.
