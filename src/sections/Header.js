@@ -10,15 +10,13 @@ const Header = () => {
         <img src={logo} alt="QED Software" />
       </a>
 
-      <button className="flex items-center" data-action-contact>
-        <span className="text-blue-50 text-lg font-semibold sm:text-2xl">
-          <a href="/jobs">Join us</a>
-        </span>
+      <a href="/jobs" className="flex items-center" data-action-contact>
+        <span className="text-blue-50 text-lg font-semibold sm:text-2xl">Join us</span>
 
         <span className="bg-blue-50 block p-3 ml-5 rounded-full">
           <img src={arrow} alt="Join us" className="block" />
         </span>
-      </button>
+      </a>
     </section>
   );
 };
