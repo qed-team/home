@@ -13,9 +13,9 @@ const Footer = () => {
         .
       </p>
 
-      <button className="flex p-2 -mr-2 hidden sm:block">
+      <a href="#header" className="flex p-2 -mr-2 hidden sm:block">
         <img src={arrow} alt="Go up" />
-      </button>
+      </a>
     </section>
   );
 };
