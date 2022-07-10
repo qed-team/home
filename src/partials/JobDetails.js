@@ -36,7 +36,7 @@ const JobDetails = ({ job }) => {
           <strong className="text-xl md:text-2xl leading-loose text-black block mb-6">Plus</strong>
           <ul className="list-decimal space-y-1 ml-6">
             {job.plus.map((plus) => (
-              <li className="text-gray-400" key={plus}>
+              <li className="text-gray-400 leading-10" key={plus}>
                 {plus}
               </li>
             ))}
